@@ -1,0 +1,24 @@
+<h1>Transaction history</h1>
+<hr>
+<div class="accordion" id="accordionExample">
+  <div class="card" *ngFor="let transaction of transactions" >
+    <div class="card-header" id="headingOne" [ngStyle]="{'background-color':transaction.type == 'DEBIT' ? 'lightgreen':'red'}">
+      <h2 class="mb-0">
+        <button class="btn btn-link" style="color:black" type="button" data-toggle="collapse" [attr.data-target]="'#' + transaction.id"
+                aria-expanded="true" aria-controls="collapseOne" (click)="getTransaction(transaction.id)">
+          Operation => {{transaction.type}} :: {{transaction.value}}
+        </button>
+      </h2>
+    </div>
+
+    <div id="{{transaction.id}}" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body" *ngIf="!!transactionsDetail[transaction.id]">
+        <p>Date: {{transactionsDetail[transaction.id].dateTime}}</p>
+        <p>Type: {{transactionsDetail[transaction.id].type}}</p>
+        <p>Id: {{transactionsDetail[transaction.id].id}}</p>
+        <p>Value: {{transactionsDetail[transaction.id].type=='DEBIT'?transactionsDetail[transaction.id].value:'('+transactionsDetail[transaction.id].value+')'}}</p>
+      </div>
+    </div>
+  </div>
+
+</div>
