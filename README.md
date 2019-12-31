@@ -42,7 +42,7 @@ npm start
 
 ### Test app
 
-* Debit operation money
+* Debit operation money (POST)
 
 http://localhost:8080/api/transactions
 
@@ -52,7 +52,7 @@ http://localhost:8080/api/transactions
     "type":"DEBIT"
 }
 
-* Credit operation money
+* Credit operation money (POST)
 
 http://localhost:8080/api/transactions
 
@@ -62,15 +62,15 @@ http://localhost:8080/api/transactions
     "type":"CREDIT"
 }
 
-* View all transactions
+* View all transactions (GET)
 
-http://localhost:8080/api/transactions
+http://localhost:8080/api/transactions 
 
-* View one operation
+* View one operation (GET)
 
 http://localhost:8080/api/transactions/{id}
 
-* View account status
+* View account status (GET)
 
 http://localhost:8080/api/account
 
