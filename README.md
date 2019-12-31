@@ -6,6 +6,11 @@
 
 ### Tech stack
 
+ Pre-requisites
+  * Jdk 1.8
+  * Npm 12.11
+  * Node 8.9
+
 Backend
   * Java 8
   * Spring boot 2
@@ -19,8 +24,8 @@ Frontend
 ### Run
 
 You can find a run.sh script that starts both applications, backend-app in 8080 port and front-app in 4000 port
-Browse http://localhost:8080/swagger-ui.html#/ to visualize endpoints
-Browse http://localhost:4000 to visualize transactions history
+* Browse http://localhost:8080/swagger-ui.html#/ to visualize endpoints
+* Browse http://localhost:4000 to visualize transactions history
 
 When you run the script, logs will be visualized in nohup.out files
 
